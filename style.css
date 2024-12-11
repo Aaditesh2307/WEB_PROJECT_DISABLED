@@ -1,0 +1,130 @@
+.hero {
+  position: relative; /* Position relative to allow absolute positioning of the overlay */
+  height: 100vh; /* Set the hero section to occupy the full viewport height */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center; /* Optional: Add a background image */
+  background-size: cover; /* Optional: Cover the entire hero section with the background image */
+  color: white;
+  text-align: center;
+  padding: 8rem 0;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar .btn {
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+#content {
+  padding: 2rem;
+}
+
+/* Color-blind mode styles */
+.color-blind-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.color-blind-mode .navbar {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.color-blind-mode .btn {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: #ffffff; /* Lighter white for better contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better readability */
+}
+
+.hero .lead {
+  color: #f0f0f0; /* Slightly off-white for the subtitle */
+}
+
+.hero .btn-success {
+  background-color: #2ecc71; /* A lighter shade of green */
+  border-color: #2ecc71;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-success:hover {
+  background-color: #27ae60; /* Darker shade on hover for visual feedback */
+  border-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s;
+}
+
+.card-img-top {
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .btn-outline-light {
+  color: white;
+  border-color: white;
+}
+
+.footer .btn-outline-light:hover {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+:focus {
+  outline: 3px solid #2ecc71;
+  outline-offset: 2px;
+}
